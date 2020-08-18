@@ -1,10 +1,10 @@
 #include "ModelUdpClient.h"
-//Including udpBase header and cpp file here as well, or else program throws linker error
+// Including udpBase header and cpp file here as well, or else program throws linker error
 #include "..\UDPServer\udpBase.h"
 #include "..\UDPServer\udpBase.cpp"
 
-//Passing call to parameterized Base class constructor via Initializer
-ModelUdpClient::ModelUdpClient(unsigned short port)	
+// Passing call to parameterized Base class constructor via Initializer
+ModelUdpClient::ModelUdpClient(const unsigned short port)
 	:udpBase(port),u_socket{-1}
 {
 	// Creating Socket of type datagram
@@ -12,13 +12,13 @@ ModelUdpClient::ModelUdpClient(unsigned short port)
 	
 	// Create a hint structure for the server
 	server.sin_family = AF_INET;	 // AF_INET = IPv4 addresses
-	server.sin_port = htons(u_port);	//conversion to bigendian
+	server.sin_port = htons(u_port);	// conversion to bigendian
 	inet_pton(AF_INET, "127.0.0.2", &server.sin_addr); // Convert from string to byte array	
 }
 
 ModelUdpClient::~ModelUdpClient()
 {
-	closesocket(u_socket);	//close socket
+	closesocket(u_socket);	// close socket
 }
 
 int ModelUdpClient::getSocket() const

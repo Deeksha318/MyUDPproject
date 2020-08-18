@@ -8,10 +8,10 @@
 
 class ModelUdpServer:public udpBase
 {
-	friend void main();	//for accessing recvMsg() in main()
+	friend void main();	// for accessing recvMsg() in main()
 
 public:
-	explicit ModelUdpServer(unsigned short port);
+	explicit ModelUdpServer(const unsigned short port);	// explicit used due to warning in CppCheck
 	~ModelUdpServer();
 	int getSocket() const;
 
@@ -19,6 +19,6 @@ private:
 	int u_socket;
 	sockaddr_in serverHint;
 
-	void recvMsg();	//throws warning saying "unused function" in CppCheck but called from main()
+	void recvMsg();	// throws warning saying "unused function" in CppCheck but called from main()
 };
 

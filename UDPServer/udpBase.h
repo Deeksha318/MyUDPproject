@@ -6,7 +6,7 @@ class udpBase
 {
 public: 
 	~udpBase(){}
-	explicit udpBase(short unsigned port);	//explicit used due to warning in CppCheck
+	explicit udpBase(const unsigned short port);	// explicit used due to warning in CppCheck
 
 protected:
 	short unsigned u_port;

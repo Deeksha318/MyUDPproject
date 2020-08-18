@@ -7,8 +7,8 @@
 // Main entry point into the server
 void main()
 {
-	ModelUdpServer objServer(50003);	//pass port number
-	objServer.recvMsg();	//made accessible using friend
+	ModelUdpServer objServer(50003);	// pass port number
+	objServer.recvMsg();	// made accessible using friend
 
 	closesocket(objServer.getSocket());		// Close socket
 

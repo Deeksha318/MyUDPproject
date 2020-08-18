@@ -1,8 +1,8 @@
 #include "udpBase.h"
 
-//Initialize port number using Initializer list
- udpBase::udpBase(short unsigned port)
-	 :u_port{ port }
+// Initialize port number using Initializer list
+ udpBase::udpBase(const unsigned short port)
+	 :u_port{port}
 {
 	// INITIALIZE WINSOCK
 

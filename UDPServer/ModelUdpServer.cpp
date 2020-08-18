@@ -1,7 +1,7 @@
 #include "ModelUdpServer.h"
 
-//Passing call to parameterized Base class constructor via Initializer
-ModelUdpServer::ModelUdpServer(unsigned short port)	
+// Passing call to parameterized Base class constructor via Initializer
+ModelUdpServer::ModelUdpServer(const unsigned short port)
 	:udpBase(port),u_socket{-1}
 {	
 	// SOCKET CREATION AND BINDING
@@ -12,7 +12,7 @@ ModelUdpServer::ModelUdpServer(unsigned short port)
 	// a server hint structure for the server initialized
 	serverHint.sin_addr.S_un.S_addr = ADDR_ANY;		// bind to any IP address available on the machine
 	serverHint.sin_family = AF_INET;	// Address format: IPv4
-	serverHint.sin_port = htons(u_port);	//Conversion to bigendian
+	serverHint.sin_port = htons(u_port);	// Conversion to bigendian
 
 	// Try and bind the socket to the IP and port
 	if (bind(u_socket, (sockaddr*)&serverHint, sizeof(serverHint)) == SOCKET_ERROR)
@@ -24,7 +24,7 @@ ModelUdpServer::ModelUdpServer(unsigned short port)
 
 ModelUdpServer::~ModelUdpServer()
 {
-	closesocket(u_socket);	//close socket
+	closesocket(u_socket);	// close socket
 }
 
 int ModelUdpServer::getSocket() const
@@ -34,12 +34,12 @@ int ModelUdpServer::getSocket() const
 
 void ModelUdpServer::recvMsg()
 {
-	//MAIN LOOP SETUP AND ENTRY
+	// MAIN LOOP SETUP AND ENTRY
 
 	sockaddr_in client; // client information (port / ip address)
 	int clientLength = sizeof(client); //  size of client information
 
-	char buf[1024];	//buffer for received message
+	char buf[1024];	// buffer for received message
 	int count = 0;
 
 	// Enter a loop
