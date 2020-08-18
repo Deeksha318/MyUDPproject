@@ -1,6 +1,6 @@
 # MyUDPproject
 MyUDPProject is a Client/Server Architecture developed using object oriented programming and inheritence.
-steps to execute:
+Steps to execute:
 1. Load UDPProject1.sln in Visual Studio.
 2. Run UDPServer application and leave it up and running.
     UDPServer will wait for client to send messages. As soon as it receives 5 messages, it will close. 
