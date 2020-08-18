@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UDPClient", "UDPClient\UDPClient.vcxproj", "{A73B36C8-DE0F-4E54-BD99-F83985A33745}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8BECF226-BB2F-492C-8127-39197CF8A197} = {8BECF226-BB2F-492C-8127-39197CF8A197}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UDPServer", "UDPServer\UDPServer.vcxproj", "{8BECF226-BB2F-492C-8127-39197CF8A197}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A73B36C8-DE0F-4E54-BD99-F83985A33745}.Debug|x64.ActiveCfg = Debug|x64
+		{A73B36C8-DE0F-4E54-BD99-F83985A33745}.Debug|x64.Build.0 = Debug|x64
+		{A73B36C8-DE0F-4E54-BD99-F83985A33745}.Debug|x86.ActiveCfg = Debug|Win32
+		{A73B36C8-DE0F-4E54-BD99-F83985A33745}.Debug|x86.Build.0 = Debug|Win32
+		{A73B36C8-DE0F-4E54-BD99-F83985A33745}.Release|x64.ActiveCfg = Release|x64
+		{A73B36C8-DE0F-4E54-BD99-F83985A33745}.Release|x64.Build.0 = Release|x64
+		{A73B36C8-DE0F-4E54-BD99-F83985A33745}.Release|x86.ActiveCfg = Release|Win32
+		{A73B36C8-DE0F-4E54-BD99-F83985A33745}.Release|x86.Build.0 = Release|Win32
+		{8BECF226-BB2F-492C-8127-39197CF8A197}.Debug|x64.ActiveCfg = Debug|x64
+		{8BECF226-BB2F-492C-8127-39197CF8A197}.Debug|x64.Build.0 = Debug|x64
+		{8BECF226-BB2F-492C-8127-39197CF8A197}.Debug|x86.ActiveCfg = Debug|Win32
+		{8BECF226-BB2F-492C-8127-39197CF8A197}.Debug|x86.Build.0 = Debug|Win32
+		{8BECF226-BB2F-492C-8127-39197CF8A197}.Release|x64.ActiveCfg = Release|x64
+		{8BECF226-BB2F-492C-8127-39197CF8A197}.Release|x64.Build.0 = Release|x64
+		{8BECF226-BB2F-492C-8127-39197CF8A197}.Release|x86.ActiveCfg = Release|Win32
+		{8BECF226-BB2F-492C-8127-39197CF8A197}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08B70C1D-E3C8-4CBF-88CC-30B67DEC0E2B}
+	EndGlobalSection
+EndGlobal
